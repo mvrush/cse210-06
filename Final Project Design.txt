@@ -1,0 +1,29 @@
+Using the structure we have learned all semester about programming with classes we will program a game called Mining Madness.
+
+The object of the game is to mine minerals with the goal of mining either:
+5000 coal
+2000 silver
+1000 gold
+or
+500 platinum
+
+Once any of these goals is reached, the player wins. Coal will be the easiest to find, but you need to mine a lot of it.
+
+Maintainability will be achieved through:
+Proper folder structure
+Carful use of classes using the principles of encapsulation, polymorphism and inheritance
+Careful commenting of code
+Refactoring of code to make sure it's readable and efficient
+
+Classes unique to this game will be:
+MineralField()
+	(variables)
+	_mineral_type
+	_point_value
+	_mineral_amount
+
+Miner()
+	(variables)
+	_body
+	_animation
+	
