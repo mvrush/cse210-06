@@ -118,7 +118,7 @@ BRICK_IMAGES = {
     "y": [f"batter/assets/images/{i:03}.png" for i in range(40,49)]
 }
 BRICK_WIDTH = 80
-BRICK_HEIGHT = 28
+BRICK_HEIGHT = 80 # Increase height from 28 to 80 to space minerals per their size.
 BRICK_DELAY = 0.5
 BRICK_RATE = 4
 BRICK_POINTS = 50
