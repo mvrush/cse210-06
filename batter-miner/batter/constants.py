@@ -105,7 +105,7 @@ RACKET_GROUP = "rackets"
 RACKET_IMAGES = [f"batter/assets/images/{n:03}.png" for n in range(100, 103)]
 #RACKET_IMAGES = "batter/assets/images/miner.png" # Load the image of the miner. Couldn't use single image
 RACKET_WIDTH = 106
-RACKET_HEIGHT = 28
+RACKET_HEIGHT = 28 * 2.5 # Had to 2.5 times the height of the racket to fit the whole miner img.
 RACKET_RATE = 6
 RACKET_VELOCITY = 7
 
