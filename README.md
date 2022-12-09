@@ -1,17 +1,8 @@
 # cse210-06
 Miner is a game.
-It involves guiding a miner through a field of minerals to gather minerals of various values or to gather coal.
-Gold, is worth the most but it is the most rare.
-Silver - is not worth as much as Gold and is a bit more commong.
-Coal - is not worth as much as Silver or Gold but you can find it in abundance.
+It involves guiding a miner through a field of minerals to gather minerals.
 
-The goal of the game is to gather a set amount of minerals.
-To win the game you must gather either:
-1000 gold
-or
-3000 silver
-or
-10,000 coal
+The goal of the game is to gather as many minerals as you can.
 
 Get out there and start mining!
 
