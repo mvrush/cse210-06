@@ -186,6 +186,9 @@ class SceneManager:
                     position = Point(x, y)
                     size = Point(BRICK_WIDTH, BRICK_HEIGHT)
                     velocity = Point(0, 0)
+                    # Next line looks at our BRICK_IMAGES constant and looks at the column held in 'color', that will be our letter designation in the text file such as 'b' or 'g'.
+                    # It then looks at the number of frames we want to animate. So if we just put 'b1' in the text file, it will just animate 1 frame (show just 1 image)
+                    # But, if we put 'b9', it will animate through 9 frames (flash through 9 images) at the rate we set in the BRICK_RATE constant.
                     images = BRICK_IMAGES[color][0:frames]
 
                     body = Body(position, size, velocity)
@@ -230,7 +233,7 @@ class SceneManager:
     def _add_racket(self, cast):
         cast.clear_actors(RACKET_GROUP)
         x = CENTER_X - RACKET_WIDTH / 2
-        y = SCREEN_HEIGHT - RACKET_HEIGHT
+        y = SCREEN_HEIGHT - RACKET_HEIGHT # Gets the screen height and subtracts the racket height to place miner in the starting position.
         position = Point(x, y)
         size = Point(RACKET_WIDTH, RACKET_HEIGHT)
         velocity = Point(0, 0)
