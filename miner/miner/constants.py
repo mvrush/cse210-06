@@ -45,8 +45,8 @@ PURPLE = Color(255, 0, 255)
 # KEYS
 LEFT = "left"
 RIGHT = "right"
-UP = "up"
-DOWN = "down"
+UP = "up" # Add key from the raylib_keyboard_service.py for up movement.
+DOWN = "down" # Add key from the raylib_keyboard_service.py for down movement.
 SPACE = "space"
 ENTER = "enter"
 PAUSE = "p"
@@ -103,30 +103,30 @@ BALL_HEIGHT = 28
 BALL_VELOCITY = 6
 
 # RACKET
-RACKET_GROUP = "rackets"
+RACKET_GROUP = "rackets" # This is now our miner
 RACKET_IMAGES = [f"batter/assets/images/{n:03}.png" for n in range(100, 103)]
-#RACKET_IMAGES = "batter/assets/images/miner.png" # Load the image of the miner. Couldn't use single image
-RACKET_WIDTH = 106
+#RACKET_IMAGES = "batter/assets/images/miner.png" # Load the image of the miner. I tried to do this with a single image and couldn't.
+RACKET_WIDTH = 28 # This was 106 and I changed it to 28 to match the size of the ball
 RACKET_HEIGHT = 28 * 2.5 # Had to 2.5 times the height of the racket to fit the whole miner img.
-RACKET_RATE = 6
-RACKET_VELOCITY = 7
+RACKET_RATE = 6 # how quickly it goes through the animations to form the animation speed of the pick.
+RACKET_VELOCITY = 3 # How fast the miner moves on the screen
 
 # BRICK
 BRICK_GROUP = "bricks"
 BRICK_IMAGES = {
-    "b": [f"batter/assets/images/{i:03}.png" for i in range(10,19)],
+    "b": [f"batter/assets/images/{i:03}.png" for i in range(10,19)], # {i:03}.png means first 3 letters before the .png for the filename. To animate you put the row and number of animation images in the data text file. To go through all 9 images you would put 'b9' to just to one image you do 'b1'
     "g": [f"batter/assets/images/{i:03}.png" for i in range(20,29)],
     "p": [f"batter/assets/images/{i:03}.png" for i in range(30,39)],
     "y": [f"batter/assets/images/{i:03}.png" for i in range(40,49)]
 }
 BRICK_WIDTH = 80
 BRICK_HEIGHT = 80 # Increase height from 28 to 80 to space minerals per their size.
-BRICK_DELAY = 0.5
-BRICK_RATE = 4
+BRICK_DELAY = 0.5 # The delay between animation sequences
+BRICK_RATE = 4 # how quickly it goes through the images to form the animation speed.
 BRICK_POINTS = 50
 
 # DIALOG
 DIALOG_GROUP = "dialogs"
 ENTER_TO_START = "PRESS ENTER TO START"
-PREP_TO_LAUNCH = "PREPARING TO LAUNCH"
+PREP_TO_LAUNCH = "PREPARING TO MINE"
 WAS_GOOD_GAME = "GAME OVER"
