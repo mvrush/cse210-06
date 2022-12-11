@@ -28,8 +28,8 @@ FONT_SMALL = 32
 FONT_LARGE = 48
 
 # SOUND
-BOUNCE_SOUND = "batter/assets/sounds/boing.wav"
-WELCOME_SOUND = "batter/assets/sounds/start.wav"
+BOUNCE_SOUND = "batter/assets/sounds/mineral.wav"
+WELCOME_SOUND = "batter/assets/sounds/ready.wav"
 OVER_SOUND = "batter/assets/sounds/over.wav"
 
 # TEXT
