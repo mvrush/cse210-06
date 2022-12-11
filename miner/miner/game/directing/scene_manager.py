@@ -1,4 +1,5 @@
 import csv
+import random # bring in the random library to randomize brick/mineral placement
 from constants import *
 from game.casting.animation import Animation
 from game.casting.ball import Ball
@@ -174,8 +175,8 @@ class SceneManager:
             for r, row in enumerate(reader):
                 for c, column in enumerate(row):
 
-                    x = FIELD_LEFT + c * BRICK_WIDTH
-                    y = FIELD_TOP + r * BRICK_HEIGHT
+                    x = random.randint(FIELD_LEFT, FIELD_RIGHT - 50) # I used random to generate a random integer for x between the values for FIELD_LEFT and FIELD_RIGHT. Had to do FIELD_RIGHT - 50 to keep images from running off right side of screen.
+                    y = random.randint(FIELD_TOP, FIELD_BOTTOM - 75) # I used random to generate a random integer for y between the values for FIELD_TOP and FIELD_BOTTOM. Had to do FIELD_BOTTOM - 75 to keep images from running off bottom of screen.
                     color = column[0]
                     frames = int(column[1])
                     points = BRICK_POINTS 
@@ -277,6 +278,6 @@ class SceneManager:
         script.add_action(UPDATE, self.MOVE_RACKET_ACTION)
         script.add_action(UPDATE, self.COLLIDE_BORDERS_ACTION)
         script.add_action(UPDATE, self.COLLIDE_BRICKS_ACTION)
-        #script.add_action(UPDATE, self.COLLIDE_RACKET_ACTION) # remove to silence ball collision sound
+        #script.add_action(UPDATE, self.COLLIDE_RACKET_ACTION) # remove this to silence the ball collision sound
         script.add_action(UPDATE, self.MOVE_RACKET_ACTION)
         script.add_action(UPDATE, self.CHECK_OVER_ACTION)
