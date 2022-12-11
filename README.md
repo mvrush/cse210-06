@@ -6,4 +6,4 @@ The goal of the game is to gather as many minerals as you can.
 
 Get out there and start mining!
 
-To run the game, simply run __main__.py from the 'batter-miner' folder at the command prompt
+To run the game, simply run __main__.py from the 'miner' folder at the command prompt
